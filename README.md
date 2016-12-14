@@ -82,3 +82,15 @@ The range of supported conversion has been extended:
 - LuaToGo can convert to interfaces and pointers with several levels of indirection.
 
 - LuaToGo can convert to non-empty maps and structs.
+
+
+# Luar v2
+
+The v1 API suffers from several design issues:
+The `GoToLua` and `LuaToGo` functions take a `reflect.Type` parameter, which is
+bad design. Sadly changing this would break backward compatibility.
+
+The v2 rewrite fixes the design issues, usability and other bugs. Overall it
+greatly simplifies the API.
+
+Check it out in the `v2` branch of this repository.
